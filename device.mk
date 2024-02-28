@@ -165,6 +165,10 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# CAS
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.2-service \
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
