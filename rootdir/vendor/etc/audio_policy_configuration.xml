@@ -113,6 +113,9 @@
 
         </module>
 
+        <!-- Bluetooth Audio HAL -->
+        <xi:include href="bluetooth_audio_policy_configuration.xml"/>
+
         <!-- Hearing aid Audio HAL -->
         <xi:include href="hearing_aid_audio_policy_configuration.xml"/>
 
