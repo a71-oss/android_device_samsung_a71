@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SUNLIGHTENHANCEMENT_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SUNLIGHTENHANCEMENT_H
+#pragma once
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
@@ -32,10 +31,6 @@ class SunlightEnhancement : public ISunlightEnhancement {
     // Methods from ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
-
-    // Methods from ::android::hidl::base::V1_0::IBase follow.
-  private:
-    std::string previous_brightness;
 };
 
 }  // namespace samsung
@@ -43,5 +38,3 @@ class SunlightEnhancement : public ISunlightEnhancement {
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
-
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_V2_0_SUNLIGHTENHANCEMENT_H
