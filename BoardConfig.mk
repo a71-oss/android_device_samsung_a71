@@ -122,6 +122,9 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     $(DEVICE_PATH)/compatibility_matrix.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_a71
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-09-01
 

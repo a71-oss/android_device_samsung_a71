@@ -14,7 +14,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_a71
 PRODUCT_DEVICE := a71
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-A715F
+PRODUCT_MODEL := SM-A715
 PRODUCT_MANUFACTURER := samsung
 
 # Use the latest approved GMS identifiers
