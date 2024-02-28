@@ -192,7 +192,10 @@ PRODUCT_PACKAGES += \
     gralloc.sm6150 \
     hwcomposer.sm6150 \
     libdisplayconfig.qti \
+    libdisplayconfig.system.qti \
     libqdMetaData \
+    libqdMetaData.system \
+    libdrmclearkeyplugin \
     libsdmcore \
     libsdmutils \
     libtinyxml \
