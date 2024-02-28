@@ -12,4 +12,7 @@
 
     <!-- Default accelerometer rotation -->
     <bool name="def_accelerometer_rotation">true</bool>
+
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
+    <string name="def_device_name_simple">Galaxy A71</string>
 </resources>
