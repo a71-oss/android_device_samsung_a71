@@ -1,0 +1,26 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm6150",
+    defaults: ["hidl_defaults"],
+    init_rc: ["vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm6150.rc"],
+    relative_install_path: "hw",
+    srcs: [
+        "AdaptiveBacklight.cpp",
+        "DisplayModes.cpp",
+        "SunlightEnhancement.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libhidlbase",
+        "libutils",
+        "vendor.lineage.livedisplay@2.0",
+    ],
+    vendor: true,
+}
