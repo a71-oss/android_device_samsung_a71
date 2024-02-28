@@ -72,6 +72,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# CnE
+BOARD_USES_QCNE := true
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-09-01
 
