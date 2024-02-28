@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.3-impl \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
+    Snap \
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -219,6 +220,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(DEVICE_PATH)/overlay-lineage/lineage-sdk \
+    $(DEVICE_PATH)/overlay-lineage/packages/apps/Snap \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
