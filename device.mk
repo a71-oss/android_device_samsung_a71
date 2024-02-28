@@ -190,6 +190,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3 \
     android.hardware.drm@1.3.vendor \
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd \
+
 # FM
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
