@@ -53,7 +53,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             break;
 
         case Mode::LOW_POWER:
-        case Mode::EXPENSIVE_RENDERING:
         case Mode::DEVICE_IDLE:
         case Mode::DISPLAY_INACTIVE:
         case Mode::AUDIO_STREAMING_LOW_LATENCY:
@@ -66,6 +65,9 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             break;
         case Mode::LAUNCH:
             power_hint(POWER_HINT_LAUNCH, enabled ? &enabled : NULL);
+            break;
+        case Mode::EXPENSIVE_RENDERING:
+            set_expensive_rendering(enabled);
             break;
         case Mode::INTERACTIVE:
             setInteractive(enabled);
@@ -83,13 +85,11 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 
 ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
     LOG(INFO) << "Power isModeSupported: " << static_cast<int32_t>(type);
-
 #ifdef MODE_EXT
     if (isDeviceSpecificModeSupported(type, _aidl_return)) {
         return ndk::ScopedAStatus::ok();
     }
 #endif
-
     switch (type) {
         case Mode::DOUBLE_TAP_TO_WAKE:
 
@@ -97,6 +97,7 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
             break;
 
         case Mode::LAUNCH:
+        case Mode::EXPENSIVE_RENDERING:
         case Mode::INTERACTIVE:
         case Mode::SUSTAINED_PERFORMANCE:
         case Mode::FIXED_PERFORMANCE:
