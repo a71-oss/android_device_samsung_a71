@@ -196,6 +196,8 @@ PRODUCT_PACKAGES += \
     fastbootd \
 
 # Fingerprint
+TARGET_HAS_UDFPS := true
+
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.face@1.0 \
     android.hardware.biometrics.face@1.0.vendor \
