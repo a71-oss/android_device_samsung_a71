@@ -221,6 +221,18 @@ SIM_COUNT := 2
 # Rootfs
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    dqmdbg \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    omr \
+    optics \
+    prism \
+    spu \
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2022-09-01
 
