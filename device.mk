@@ -558,6 +558,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/samsung \
+    vendor/qcom/opensource/usb/etc \
 
 # Telephony
 PRODUCT_PACKAGES += \
