@@ -113,9 +113,6 @@
 
         </module>
 
-        <!-- A2dp Audio HAL -->
-        <xi:include href="a2dp_audio_policy_configuration.xml"/>
-
         <!-- Hearing aid Audio HAL -->
         <xi:include href="hearing_aid_audio_policy_configuration.xml"/>
 
