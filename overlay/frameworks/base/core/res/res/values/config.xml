@@ -25,7 +25,7 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 M 0,12.08888888888889 a 9.244444444444444,9.244444444444444 0 1,0 0,18.48888888888889 a 9.244444444444444,9.244444444444444 0 1,0 0,-18.48888888888889 Z @dp</string>
+    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -14.0952380952381 V 34.66666666666667 H 14.0952380952381 V 0 H 0 Z @dp</string>
 
     <!-- Flag indicating whether we should enable the automatic brightness.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
