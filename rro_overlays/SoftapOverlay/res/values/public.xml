@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+-->
+<resources>
+    <public type="bool" name="config_wifiSofapClientForceDisconnectSupported" id="0x7f010000" />
+    <public type="bool" name="config_wifiSoftApDynamicCountryCodeUpdateSupported" id="0x7f010001" />
+    <public type="bool" name="config_wifiSoftapAutoAppendLowerBandsToBandConfigurationEnabled" id="0x7f010002" />
+    <public type="bool" name="config_wifiSoftapAutoUpgradeToBridgedConfigWhenSupported" id="0x7f010003" />
+    <public type="bool" name="config_wifiSoftapPassphraseAsciiEncodableCheck" id="0x7f010004" />
+    <public type="bool" name="config_wifiSoftapResetChannelConfig" id="0x7f010005" />
+    <public type="bool" name="config_wifiSoftapResetHiddenConfig" id="0x7f010006" />
+    <public type="bool" name="config_wifiSoftapResetMaxClientSettingConfig" id="0x7f010007" />
+    <public type="bool" name="config_wifi_softap_acs_supported" id="0x7f010008" />
+    <public type="integer" name="config_wifiHardwareSoftapMaxClientCount" id="0x7f020000" />
+    <public type="string" name="config_wifiSoftap2gChannelList" id="0x7f030000" />
+    <public type="string" name="config_wifiSoftap5gChannelList" id="0x7f030001" />
+</resources>
