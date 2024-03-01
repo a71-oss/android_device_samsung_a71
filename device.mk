@@ -121,6 +121,7 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
+    charger_res_images_vendor \
     libsuspend \
 
 # Display
@@ -213,8 +214,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery \
     android.hardware.health@2.1.vendor \
     vendor.lineage.health-service.default \
 
