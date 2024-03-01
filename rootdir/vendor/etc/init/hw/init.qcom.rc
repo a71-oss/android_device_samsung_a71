@@ -25,7 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
@@ -137,30 +136,12 @@ on early-boot
     chmod 0664 /mnt/vendor/persist/data/pfm/licenses/store_4
 
 on boot
-    #chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
-    #chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
-    #chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
-    #chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-    #chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_lpm
-    #chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_btwrite
-    #chown system system /sys/module/sco/parameters/disable_esco
-    #chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
     chown system system /sys/module/msm_core/parameters/polling_interval
     chown system system /sys/module/msm_core/parameters/disabled
     chown system system /sys/kernel/debug/msm_core/enable
     chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
     chown system system /sys/kernel/boot_adsp/ssr
-    #chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
-    #chmod 0660 /sys/module/bluetooth_power/parameters/power
-    #chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
-    #chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
-    #chmod 0660 /sys/class/rfkill/rfkill0/state
-    #chmod 0660 /proc/bluetooth/sleep/proto
-    #chown bluetooth net_bt /dev/ttyHS0
-    #chmod 0660 /sys/module/hci_uart/parameters/ath_lpm
-    #chmod 0660 /sys/module/hci_uart/parameters/ath_btwrite
-    #chmod 0660 /dev/ttyHS0
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
@@ -767,11 +748,6 @@ service qcom-sh /vendor/bin/init.qcom.sh
     user root
     group root system radio
     oneshot
-# Remove since is deprecated but throws AVC denial.
-# service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-#    class late_start
-#    user root
-#    oneshot
 
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
@@ -779,14 +755,6 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     group root system wakelock graphics
     disabled
     oneshot
-
-#    do not run the script for treble-based model
-#service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
-#    class late_start
-#    user root
-#    disabled
-#    oneshot
-#    seclabel u:r:qti-testscripts:s0
 
 service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     class late_start
@@ -934,7 +902,6 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     group nfc
 
 on property:init.svc.vendor.charger=running
-#    setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
 
 #add poweroffhandler
@@ -944,12 +911,6 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     group graphics audio
     disabled
     oneshot
-
-# service time_daemon /vendor/bin/time_daemon
-#    class main
-#    user system
-#    group system
-#    capabilities SYS_TIME
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
@@ -963,23 +924,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
-
-#service vendor.hbtp /vendor/bin/hbtp_daemon
-#     class main
-#     user system
-#     group system
-#     capabilities SYS_NICE
-#     disabled
-
-#service chre /vendor/bin/chre
-#    class late_start
-#    user system
-#    group system
-#    socket chre seqpacket 0660 root system
-#    shutdown critical
-
-#on property:vendor.chre.enabled=0
-#   stop chre
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main

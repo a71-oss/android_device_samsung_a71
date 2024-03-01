@@ -28,13 +28,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qti.ufs.rc",
-    src: "vendor/etc/init/hw/init.qti.ufs.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.samsung.bsp.rc",
     src: "vendor/etc/init/hw/init.samsung.bsp.rc",
     sub_dir: "init/hw",

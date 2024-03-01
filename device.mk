@@ -451,7 +451,6 @@ PRODUCT_PACKAGES += \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qti.ufs.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
