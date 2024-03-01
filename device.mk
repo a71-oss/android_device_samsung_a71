@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images_vendor \
     libsuspend \
+    vendor.lineage.fastcharge@1.0-service.a71 \
 
 # Display
 TARGET_SCREEN_HEIGHT := 2400
