@@ -15,6 +15,7 @@ LOCAL_SRC_FILES := \
 LOCAL_SHARED_LIBRARIES := \
     libbase \
     libbinder \
+    libcutils \
     libhidlbase \
     libutils \
     vendor.lineage.fastcharge@1.0
