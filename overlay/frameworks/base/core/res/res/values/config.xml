@@ -95,6 +95,10 @@
          will not debounce light sensor readings -->
     <integer name="config_lightSensorWarmupTime">200</integer>
 
+    <!-- Allow the gesture to double tap the power button twice to start the camera while the device
+         is non-interactive. -->
+    <bool name="config_cameraDoubleTapPowerGestureEnabled">false</bool>
+
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
          (1-based arrays)
