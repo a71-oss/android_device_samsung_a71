@@ -163,7 +163,7 @@ TARGET_HAS_UDFPS := true
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.face@1.0.vendor \
     android.hardware.biometrics.fingerprint@2.1.vendor \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung \
+    android.hardware.biometrics.fingerprint-service.samsung \
     SamsungUdfpsHandler.sm6150 \
 
 # FM
