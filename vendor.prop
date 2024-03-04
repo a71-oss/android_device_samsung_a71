@@ -55,8 +55,6 @@ vendor.audio.volume.headset.gain.depcal=true
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
-persist.bluetooth.a2dp_offload.disabled=false
 bluetooth.device.class_of_device=90,2,12
 bluetooth.device.default_name=Galaxy A71
 bluetooth.profile.a2dp.source.enabled?=true
@@ -73,6 +71,8 @@ bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
@@ -225,6 +225,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # RIL
 keyguard.no_require_sim=true
+persist.sys.radio.force_lte_ca=true
 persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.atfwd.start=true
@@ -240,7 +241,6 @@ ro.vendor.use_data_netmgrd=false
 telephony.lteOnCdmaDevice=1
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
-persist.sys.radio.force_lte_ca=true
 
 # USB
 vendor.usb.controller=a600000.dwc3
