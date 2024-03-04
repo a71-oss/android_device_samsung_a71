@@ -17,6 +17,9 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A715
 PRODUCT_MANUFACTURER := samsung
 
+# Recovery
+TARGET_USES_AOSP_RECOVERY := true
+
 # Use the latest approved GMS identifiers
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
