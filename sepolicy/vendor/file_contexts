@@ -30,7 +30,7 @@
 /data/vendor/gatekeeper(/.*)?                  u:object_r:gatekeeper_vendor_data_file:s0
 /data/vendor/gps(/.*)?                         u:object_r:vendor_gps_file:s0
 /data/vendor/log/audiopcm(/.*)?                u:object_r:vendor_audiopcm_data_file:s0
-/data/vendor/secradio(/.*)?                    u:object_r:vendor_radio_data_file:s0
+/data/secradio(/.*)?                           u:object_r:radio_data_file:s0
 
 # Devices
 /dev/android_rndis_qc                          u:object_r:radio_device:s0
